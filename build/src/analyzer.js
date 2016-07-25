@@ -105,6 +105,9 @@ var Analyzer = (function () {
      * Compare the input string (either a word or a phrase) with a specific Word from the config
      */
     Analyzer.prototype.compare = function (input, check) {
+        if (input.trim().length === 0) {
+            return 0;
+        }
         var word = check.word;
         var score = 0;
         if (word.charAt(word.length - 1) === "*") {
@@ -126,6 +129,9 @@ var Analyzer = (function () {
     Analyzer.prototype.checkArray = function (input) {
         var score = 0;
         for (var w = 0; w < input.length; w++) {
+            if (!input[w] || input[w] === "") {
+                continue;
+            }
             for (var i = 0; i < this.config.words.length; i++) {
                 score += this.compare(input[w], this.config.words[i]);
             }

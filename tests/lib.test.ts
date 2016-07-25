@@ -39,8 +39,7 @@ describe("Test analyzer", () => {
 
       let expectedResult2 = [ '1 2', '1 2', '1 2', '1 2', '1 2' ];
       let result2 = (an as any).phrasify(message, 1);
-      assert.deepEqual(result2, expectedResult2);
-      
+      assert.deepEqual(result2, expectedResult2);      
       done();
     });
     it("should test the compare", (done) => {
@@ -60,6 +59,12 @@ describe("Test analyzer", () => {
 
       done();
     });
+    it("should test with an empty string", (done) => {
+      let an: Analyzer = new Analyzer();
+      let score = an.analyze("");
+      assert.equal(score, 0);
+      done();
+    });
   });
 
   describe("Test the default", () => {    
@@ -74,7 +79,7 @@ describe("Test analyzer", () => {
     });
   });
 
-  describe("Test the custom", () => {
+  describe("Test the custom configuration", () => {
     it("should test the passed in custom config", (done) => {
       let an: Analyzer = new Analyzer(customConfig);
       let safeScore = an.analyze(safeText);

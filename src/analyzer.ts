@@ -118,6 +118,9 @@ export class Analyzer {
    * Compare the input string (either a word or a phrase) with a specific Word from the config
    */
   private compare(input: string, check: BaseConfig.Word) {
+    if(input.trim().length === 0){
+      return 0;
+    }
     let word = check.word;
     let score = 0;
     if (word.charAt(word.length - 1) === "*") {
@@ -140,6 +143,9 @@ export class Analyzer {
   private checkArray(input: string[]): number {
     var score: number = 0;
     for (let w = 0; w < input.length; w++) {
+      if(!input[w] || input[w] === ""){
+        continue;
+      }
       for (let i = 0; i < this.config.words.length; i++) {
         score += this.compare(input[w], this.config.words[i]);
       }
