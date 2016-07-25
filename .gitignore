@@ -1,6 +1,5 @@
 build/tests
 build/**/*.map
-build/src/configs
 logs
 *.log
 npm-debug.log*
