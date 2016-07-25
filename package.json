@@ -1,15 +1,16 @@
 {
-  "name": "text_risk_parser",
-  "version": "0.0.1",
+  "name": "k-text-analyzer",
+  "version": "0.2.1",
   "description": "A simple library that parses a blob of text and compares it to a configuration file for level of risk. uses would include looking for threats or suicidal ideations. This is not fool-proof and is a work in progress.",
   "main": "index.js",
   "scripts": {
-    "build": "rm -rf build && ./node_modules/typescript/bin/tsc",
-    "test": "npm run build && mocha build/tests/**.js"
+    "build": "rm -rf build && ./node_modules/typescript/bin/tsc && npm run doc",
+    "test": "npm run build && ./node_modules/mocha/bin/mocha build/tests/**.js",
+    "doc": "npm run build && ./node_modules/typedoc/bin/typedoc --out docs --readme README.md --name 'K Text Analyzer'  src/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kevineaton/text-risk-parser.git"
+    "url": "git+https://github.com/kvss/k-text-analyzer.git"
   },
   "keywords": [
     "risk",
@@ -20,14 +21,15 @@
   "author": "Kevin Eaton <kevin.eaton@kvsstechnologies.com> (https://www.kvsstechnologies.com)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/kevineaton/text-risk-parser/issues"
+    "url": "https://github.com/kvss/k-text-analyzer/issues"
   },
-  "homepage": "https://github.com/kevineaton/text-risk-parser#readme",
+  "homepage": "https://github.com/kvss/k-text-analyzer#readme",
   "dependencies": {
     "async": "^2.0.1",
     "lodash": "^4.13.1"
   },
   "devDependencies": {
+    "mocha": "^2.5.3",
     "typedoc": "^0.4.4",
     "typescript": "^1.8.0"
   }
