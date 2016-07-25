@@ -10,9 +10,13 @@ This module was created for use in a few applications created by [KVSS Technolog
 
 ## Installation
 
-The library is written in [TypeScript](http://www.typescriptlang.org/) and is distributed in ES5. Usage should be as simple as
+The library is written in [TypeScript](http://www.typescriptlang.org/) and is distributed in ES5. In a NodeJS project, usage should be as simple as
 
 `var analyzer = require("k-text-analyzer");`
+
+`var a = new analyzer.Analyzer();`
+
+`var score = a.analyze("YOUR TEXT");`
 
 ## Building
 
