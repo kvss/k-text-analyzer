@@ -1,0 +1,34 @@
+{
+  "name": "text_risk_parser",
+  "version": "0.0.1",
+  "description": "A simple library that parses a blob of text and compares it to a configuration file for level of risk. uses would include looking for threats or suicidal ideations. This is not fool-proof and is a work in progress.",
+  "main": "index.js",
+  "scripts": {
+    "build": "rm -rf build && ./node_modules/typescript/bin/tsc",
+    "test": "npm run build && mocha build/tests/**.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevineaton/text-risk-parser.git"
+  },
+  "keywords": [
+    "risk",
+    "assessment",
+    "parser",
+    "analyze"
+  ],
+  "author": "Kevin Eaton <kevin.eaton@kvsstechnologies.com> (https://www.kvsstechnologies.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kevineaton/text-risk-parser/issues"
+  },
+  "homepage": "https://github.com/kevineaton/text-risk-parser#readme",
+  "dependencies": {
+    "async": "^2.0.1",
+    "lodash": "^4.13.1"
+  },
+  "devDependencies": {
+    "typedoc": "^0.4.4",
+    "typescript": "^1.8.0"
+  }
+}
