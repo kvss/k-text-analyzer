@@ -2,7 +2,7 @@
   "name": "k-text-analyzer",
   "version": "0.2.1",
   "description": "A simple library that parses a blob of text and compares it to a configuration file for level of risk. uses would include looking for threats or suicidal ideations. This is not fool-proof and is a work in progress.",
-  "main": "index.js",
+  "main": "build/src/analyzer.js",
   "scripts": {
     "build": "rm -rf build && ./node_modules/typescript/bin/tsc && npm run doc",
     "test": "npm run build && ./node_modules/mocha/bin/mocha build/tests/**.js",
