@@ -6,7 +6,7 @@
   "scripts": {
     "build": "rm -rf build && ./node_modules/typescript/bin/tsc && npm run doc",
     "test": "npm run build && ./node_modules/mocha/bin/mocha build/tests/**.js",
-    "doc": "npm run build && ./node_modules/typedoc/bin/typedoc --out docs --readme README.md --name 'K Text Analyzer'  src/"
+    "doc": "./node_modules/typedoc/bin/typedoc --out docs --readme README.md --name 'K Text Analyzer'  src/"
   },
   "repository": {
     "type": "git",
